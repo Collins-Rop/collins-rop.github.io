@@ -568,6 +568,9 @@
                 <a href="#projects" class="btn btn-primary">
                     <i class="fas fa-code"></i> View My Work
                 </a>
+                <a href="./assets/Collins_Kimutai_Rop_Resume.pdf" download="Collins_Kimutai_Rop_Resume.pdf" class="btn">
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
                 <a href="#contact" class="btn">
                     <i class="fas fa-envelope"></i> Get In Touch
                 </a>
@@ -589,9 +592,7 @@
                 <p>When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, and sharing knowledge with the developer community.</p>
             </div>
             <div class="about-image fade-in">
-                <div style="width: 100%; height: 300px; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--bg-color); font-size: 4rem;">
-                    <i class="fas fa-user"></i>
-                </div>
+                <img src="images/collins.png" alt="Collins Kimutai Rop" style="width: 100%; height: 300px; object-fit: cover; border-radius: 10px;">
             </div>
         </div>
     </section>
@@ -690,9 +691,9 @@
                 </div>
                 <div class="job-skills">
                     <span class="skill-tag">Next.js</span>
-                    <span class="skill-tag">BigQuery</span>
-                    <span class="skill-tag">Cloud Computing</span>
-                    <span class="skill-tag">AI/ML</span>
+                    <span class="skill-tag">FastAPI</span>
+                    <span class="skill-tag">Google Cloud Computing</span>
+                    <span class="skill-tag">PostgreSQL</span>
                     <span class="skill-tag">API Development</span>
                 </div>
             </div>
@@ -780,7 +781,7 @@
                     Developed and maintained OpenMRS modules for clinical workflows and patient record management, with integration to MOH registers for national health reporting.
                 </p>
                 <div class="project-tech">
-                    <span class="tech-tag">Java</span>
+                    <span class="tech-tag">React</span>
                     <span class="tech-tag">Spring</span>
                     <span class="tech-tag">MySQL</span>
                     <span class="tech-tag">REST APIs</span>
@@ -859,12 +860,11 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Collins Kimutai Rop. Built with passion and clean code.</p>
-        <p>📍 Nairobi, Kenya | AWS Certified Cloud Practitioner</p>
+        <p>&copy; 2025 Collins Kimutai Rop.</p>
+        <p>📍 Nairobi, Kenya</p>
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -877,8 +877,6 @@
                 }
             });
         });
-
-        // Scroll indicator
         window.addEventListener('scroll', () => {
             const scrollIndicator = document.getElementById('scrollIndicator');
             const scrollTop = window.pageYOffset;
@@ -888,7 +886,6 @@
             scrollIndicator.style.transform = `scaleX(${scrollPercent / 100})`;
         });
 
-        // Fade in animation on scroll
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -100px 0px'
@@ -902,12 +899,10 @@
             });
         }, observerOptions);
 
-        // Observe all fade-in elements
         document.querySelectorAll('.fade-in').forEach(el => {
             observer.observe(el);
         });
 
-        // Mobile menu toggle (if needed for future enhancement)
         const mobileMenu = document.querySelector('.mobile-menu');
         const navLinks = document.querySelector('.nav-links');
         
@@ -917,7 +912,6 @@
             });
         }
 
-        // Active navigation link highlighting
         window.addEventListener('scroll', () => {
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('.nav-links a');
@@ -939,7 +933,6 @@
             });
         });
 
-        // Add typing effect to hero section
         const subtitle = document.querySelector('.hero .subtitle');
         const text = subtitle.textContent;
         subtitle.textContent = '';
@@ -955,12 +948,10 @@
             }
         }
         
-        // Start typing effect after page loads
         window.addEventListener('load', () => {
             setTimeout(typeWriter, 1000);
         });
 
-        // Form validation and error handling (clean code practices)
         function validateEmail(email) {
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             return emailRegex.test(email);
@@ -968,10 +959,8 @@
 
         function handleError(error, context) {
             console.error(`Error in ${context}:`, error);
-            // In a real application, you might want to send this to a logging service
         }
 
-        // Performance optimization: Debounce scroll events
         function debounce(func, wait) {
             let timeout;
             return function executedFunction(...args) {
@@ -984,10 +973,8 @@
             };
         }
 
-        // Apply debouncing to scroll events
         const debouncedScrollHandler = debounce(() => {
-            // Scroll handling logic here
-        }, 16); // ~60fps
+        }, 16); 
 
         window.addEventListener('scroll', debouncedScrollHandler);
     </script>
